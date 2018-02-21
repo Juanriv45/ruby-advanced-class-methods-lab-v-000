@@ -26,4 +26,9 @@ class Song
     song.name = new_song
     song
   end
+  def self.find_by_name(song_name)
+    self.class.all.detect do |song|
+      song == song_name
+    end
+  end
 end
