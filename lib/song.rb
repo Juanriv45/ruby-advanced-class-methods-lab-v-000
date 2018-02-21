@@ -32,8 +32,8 @@ class Song
     end
   end
   def self.find_or_create_by_name(song_name)
-    self.all.detect do |song|
-      song.name == song_name
+    if !self.find_by_name(song_name) then
+      self.create_by_name(song_name)
     end
   end
   
