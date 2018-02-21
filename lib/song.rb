@@ -20,5 +20,6 @@ class Song
     name = Song.new
     name.save
     name.name = new_name
+    name.name
   end
 end
